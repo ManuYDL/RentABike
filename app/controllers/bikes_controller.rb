@@ -1,5 +1,5 @@
 class BikesController < ApplicationController
-  before_action set_user, only: ["new", "create"]
+  before_action :set_user, only: ["new", "create"]
 
   def index
     @bikes = Bike.all
@@ -7,7 +7,6 @@ class BikesController < ApplicationController
 
   def new
     @bike = Bike.new
-    @bike.user = @user
   end
 
   def create
@@ -20,6 +19,28 @@ class BikesController < ApplicationController
     end
   end
 
+  def show
+    @bike = Bike.find(params[:id])
+  end
+
+  def edit
+    @bike = Bike.find(params[:id])
+  end
+
+  def update
+    @bike = Bike.find(params[:id])
+    if @bike.update(bike_params)
+      redirect_to bike_path(@bike)
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    @bike = Bike.find(params[:id])
+    @bike.destroy
+    redirect_to bikes_path
+  end
 
   private
 

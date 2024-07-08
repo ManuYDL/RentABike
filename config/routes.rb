@@ -11,5 +11,5 @@ Rails.application.routes.draw do
   resources :users do
     resources :bikes, only: [:new, :create] #:show ici?
   end
-  resources :bikes, only: [:index, :show] #ou là?
+  resources :bikes, only: [:index, :show, :edit, :update, :destroy] #ou là?
 end
