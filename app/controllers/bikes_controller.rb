@@ -21,6 +21,8 @@ class BikesController < ApplicationController
 
   def show
     @bike = Bike.find(params[:id])
+    @booking = Booking.new
+    # grâce à cette ligne,simple form est utilisée avec un "booking vide" %>
   end
 
   def edit
