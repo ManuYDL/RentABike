@@ -9,6 +9,8 @@
 #   end
 
 # seed.rb
+User.destroy_all
+Bike.destroy_all
 
 # Create users
 user_1 = User.create(name: "Alice", description: "Nice owner")
