@@ -1,0 +1,20 @@
+.bike_index_container {
+  grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+  gap: 16px;
+  position: relative;
+  align-items: center;
+  margin: auto;
+  border-radius: 5px;
+}
+
+.bike_index_texte{
+  align-items: center;
+  margin: auto;
+  padding: auto;
+}
+
+.bike_index_img{
+  height: 300px;
+  width: 350px;
+}
