@@ -4,7 +4,7 @@
 
 <ul>
 <% @bikes.each do |bike|%>
-<li> <%=link_to bike.color, bike_path(bike)%></li>
+<li> <%=link_to bike.name, bike_path(bike)%></li>
 <% end %>
 
 <p> <%= link_to "Add a new bikes", new_bike_path %> </p>
