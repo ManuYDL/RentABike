@@ -12,7 +12,6 @@
 @import "pages/index";
 @import "bikes/index";
 
-=======
 
 
 // <uniquifier>: Use a unique and descriptive class name
@@ -24,14 +23,13 @@ body {
   font-weight: 400;
   font-style: normal;
 
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #edb616;
-  color: white;
-  text-align: center;
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #edb616;
+    color: white;
+    text-align: center;
+  }
 }
-}
-
