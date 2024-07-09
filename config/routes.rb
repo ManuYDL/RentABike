@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'bookings/create'
+  devise_for :users
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -9,8 +9,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-  resources :users
-  resources :bikes
+  resources :bikes, only: [:index, :new, :create, :show] do
+    resources :bookings, only: [:create]
+  end
 
 
 end
