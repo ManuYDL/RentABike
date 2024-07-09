@@ -1,2 +1,13 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<%# <h1>Pages#home</h1>
+<p>Find me in app/views/pages/home.html.erb</p> %>
+
+
+
+<div class="banner py-4 my-4" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path('roues.jpg') %>'); background-repeat: no-repeat; height: 500px; background-size: cover;
+  background-position: center; color: white">
+  <div class="container">
+    <h1>We provide <strong>professional bikes</strong> to <strong>athletes</strong> !</h1>
+    <p>Change your life and pick one of our bikes.</p>
+    <%= link_to "Discover our bikes here", bikes_path , class: "btn btn-warning" %>
+  </div>
+</div>
