@@ -1,5 +1,5 @@
 class BikesController < ApplicationController
-  before_action :set_user, only: ["new", "create", "show", "edit", "update"]
+  #before_action :set_user, only: %i[new create show edit update]
 
   def index
     @bikes = Bike.all
