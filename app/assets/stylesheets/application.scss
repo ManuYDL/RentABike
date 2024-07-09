@@ -10,3 +10,24 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 300 to 900
+
+body {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #edb616;
+  color: white;
+  text-align: center;
+}
+}
