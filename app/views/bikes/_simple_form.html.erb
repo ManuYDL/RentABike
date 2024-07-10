@@ -1,0 +1,10 @@
+
+
+<%= simple_form_for [bike, booking] do |f| %>
+  <%= f.input :starting_date,
+            as: :string,
+            input_html: { data: { controller: "datepicker" } } %>
+  <%= f.submit %>
+<% end %>
+
+<%# on va utiliser flatpickr et ajouter la date selectionnée par l'User en f.input date debut et f.input date de fin %>

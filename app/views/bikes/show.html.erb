@@ -1,5 +1,6 @@
 <h1>Showing a Bike</h1>
 <%# ici sera placé notre formulaire %>
-<%# utilisation de simple form avec un "bike vide" %>
+<%# utilisation de simple form avec un "booking vide" %>
 <%# utiliser flatpick et simpl form %>
-Nice bike
+<%= render "simple_form", booking: @booking, bike: @bike%>
+<%# notre form a besoin d'un booking et d'un velo, passés en paramètre %>
