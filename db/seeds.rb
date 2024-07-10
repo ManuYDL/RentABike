@@ -21,9 +21,9 @@ user_4 = User.create!(name: "Manuel", description: "BackMan", email: "www.user_4
 
 puts "user done!"
 
-Bike.create!(name: "Lapierre", image: "https://image.jimcdn.com/app/cms/image/transf/dimension=316x422:format=jpg/path/s00c01b86c176dc21/image/i2beecdd05fee8aef/version/1680005963/image.jpg", color: "Red", price: 14, user_id: user_1.id)
-Bike.create!(name: "Speedy", image: "https://www.monequipementsport.fr/media/catalog/product/cache/9fe419b18e030d545cfcd4c196a3d959/v/e/velo-ville-people-28-pouces-7-vitesses-blanc.jpg", color: "Blue", price: 12, user_id: user_2.id)
-Bike.create!(name: "Canyon", image: "https://c4.wallpaperflare.com/wallpaper/93/637/306/canyon-bicycle-endurace-cf-sl-8-disc-aero-road-bike-sport-hd-wallpaper-thumb.jpg", color: "Yellow", price: 13, user_id: user_3.id)
-Bike.create!(name: "S-Work", image: "https://www.cyclable.com/img/c/1327.jpg", color: "Green", price: 11, user_id: user_4.id)
+Bike.create!(name: "Lapierre", image: "https://image.jimcdn.com/app/cms/image/transf/dimension=316x422:format=jpg/path/s00c01b86c176dc21/image/i2beecdd05fee8aef/version/1680005963/image.jpg", description: "To beat the competition or his own records", color: "Red", price: 14, user_id: user_1.id)
+Bike.create!(name: "Speedy", image: "https://www.monequipementsport.fr/media/catalog/product/cache/9fe419b18e030d545cfcd4c196a3d959/v/e/velo-ville-people-28-pouces-7-vitesses-blanc.jpg", description: "A mountain bike is a bicycle that allows you to ride on uneven terrain.", color: "Blue", price: 12, user_id: user_2.id)
+Bike.create!(name: "Canyon", image: "https://c4.wallpaperflare.com/wallpaper/93/637/306/canyon-bicycle-endurace-cf-sl-8-disc-aero-road-bike-sport-hd-wallpaper-thumb.jpg", description: "carbon frame, relaxed position.", color: "Yellow", price: 13, user_id: user_3.id)
+Bike.create!(name: "S-Work", image: "https://www.cyclable.com/img/c/1327.jpg", description: "S Works is the very top of the range from Specialized. For a magnificent speed ride", color: "Green", price: 11, user_id: user_4.id)
 
 puts "seeds done"
