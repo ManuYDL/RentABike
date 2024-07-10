@@ -1,14 +1,16 @@
-<h1>Navbar</h1>
 
-<h1 class="text-center">Our rental bikes </h1>
-
+<h1 class="text-center"> 🚴‍♀️ Our rental bikes 🚴‍♀️ </h1>
 
 <div class="bike_index_container">
   <% @bikes.each do |bike|%>
         <div class="bike_index_texte">
-         <%=link_to bike.name, bike_path(bike)%>
           <img class="bike_index_img"src="<%= bike.image%>">
+        <div class="bike_index_details">
+          <%= bike.name%>
+          <p> <%= bike.price%>€ </p>
+          <p>Good bike for you, enjoy your life with lot of speed</p>
+        </div>
+          <%=link_to "More details", bike_path(bike), class: "btn btn-warning" %>
         </div>
   <% end %>
 </div>
-<p> <%= link_to "Add a new bikes", new_bike_path %> </p>
