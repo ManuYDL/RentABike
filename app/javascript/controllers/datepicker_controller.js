@@ -13,25 +13,6 @@ export default class extends Controller {
 }
 
 // tester le mode range, puis splitter notre chaine de cara grâce à la methode .split ou autre...(A TROUVER)
+// split ici params[:booking][:starting_date]
 
-
-//const start_date = flatpickr("#start_date", {
-////  dateFormat: 'Y-m-d',
-////  onChange: function(sel_date, date_str) {
-////    end_date.set("minDate", date_str);
-////  }
-////});
-////
-////const end_date = flatpickr("#end_date", {
-////  dateFormat: 'Y-m-d'
-////});
-////const start_date = flatpickr("#start_date", {
-////  dateFormat: 'Y-m-d',
-////  onChange: function(sel_date, date_str) {
-////    ending_date.set("minDate", starting_date);
-////  }
-////});
-////
-////const end_date = flatpickr("#end_date", {
-////  dateFormat: 'Y-m-d'
-//});
+//  string.split(" to ")[1]
