@@ -1,4 +1,22 @@
-<h1>Showing a Bike</h1>
+<div class="mx-auto p-2"><h1><%= @bike.name %></h1>
+</div>
+
+<div class="mx-auto p-2"> <img src="<%= @bike.image%>" > </div>
+
+<p> <ul> <h3>Specificity</h3>
+<li> Color : <%= @bike.color %> </li>
+<li> Price : <%= @bike.price %> € </li>
+<li> Rented by : <%= @bike.user.name %> </li>
+<li> Description : <%= @bike.description %> </li>
+</ul>
+</p>
+
+<div class="mx-auto p-2" class="rounded-1"> <%=link_to "Return to others bike", bikes_path(@bike), class: "btn btn-warning" %>
+</div>
+
+
+
+
 <%# ici sera placé notre formulaire %>
 <%# utilisation de simple form avec un "booking vide" %>
 <%# utiliser flatpick et simpl form %>

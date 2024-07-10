@@ -5,7 +5,6 @@
   position: relative;
   align-items: center;
   margin: auto;
-
 }
 
 .bike_index_texte {
@@ -21,9 +20,12 @@
   margin-left: auto;
   margin-right: auto;
   display: block;
-  height: 300px;
+  height: 100%;
   width: 100%;
   border-radius: 5px;
+  object-fit: cover;
+  max-height: 250px;
+  min-height: 250px;
 }
 
 .bike_index_details {
