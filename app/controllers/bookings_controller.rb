@@ -7,7 +7,7 @@ class BookingsController < ApplicationController
     @bike = Bike.find(params[:bike_id])
     @booking.bike = @bike
     if @booking.save!
-      redirect_to bike_path(@bike)
+      redirect_to bike_path(@bike), notice: "Acceptée"
     else
       render 'bikes/show', status: :unprocessable_entity
     end
