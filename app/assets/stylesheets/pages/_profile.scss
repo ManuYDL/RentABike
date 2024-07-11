@@ -12,18 +12,21 @@ h1 {
 
 }
 
+.card-product-img{
+  height: 100%;
+  width: 33%;
+}
+
 .card-product {
   overflow: hidden;
   height: 120px;
   background: white;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-
-/* .card-product img {
-
-}
- */
 
  .card-product h2 {
   font-size: 16px;
@@ -31,6 +34,6 @@ h1 {
   margin: 0;
 }
 
-.card-product .card-product-infos {
+.card-product .card-product-info {
   padding: 16px;
 }
