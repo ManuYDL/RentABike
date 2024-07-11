@@ -3,6 +3,8 @@ class PagesController < ApplicationController
   end
 
   def profile
-    @bookings = Booking.all
+    @user = current_user
+    @bookings = @user.bookings
+    @bikes = @user.bikes
   end
 end
