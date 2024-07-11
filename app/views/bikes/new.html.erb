@@ -4,8 +4,17 @@
 <body>
 <!-- la police de AirBnb c'est Cereal disponible il reste figtree de Google qui est similaire-->
 <!-- Bootstrap CSS -->
-<h1>Bikes#new</h1>
-<p>New user bike</p>
+<h1 class="new-title">Your bike</h1>
+<div class="new-form" >
+    <%= simple_form_for @bike do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+      <%= f.label :price %>
+      <%= f.number_field :price %>
+      <%= f.input :photo, as: :file %>
+      <%= f.submit %>
+    <% end %>
+</div>
 
 
 </body>
