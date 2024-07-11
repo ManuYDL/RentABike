@@ -1,9 +1,7 @@
 <%# <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p> %>
 
-
-
-<div class="banner py-4 my-4" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path('roues.jpg') %>'); background-repeat: no-repeat; height: 500px; background-size: cover;
+<div class="banner py-4"  style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path('roues.jpg') %>'); background-repeat: no-repeat; height: 500px; background-size: cover;
   background-position: center; color: white">
   <div class="container">
     <h1>We provide <strong>professional bikes</strong> to <strong>athletes</strong> !</h1>
@@ -16,4 +14,6 @@
       <%= link_to "Rent your bike here", new_bike_path , class: "btn btn-warning" %>
     </div>
   </div>
+</div>
+<%# <div style="height: 50vh"> %>
 </div>
