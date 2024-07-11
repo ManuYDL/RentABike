@@ -1,12 +1,33 @@
 <div class="container">
-  <center><h1>Hello <%= current_user.name%>!</h1></center>
-  <div>
-    <h2>Your bikes</h2>
-    <div class="row">
-      <% @bookings.each do |booking| %>
-        <%= booking.starting_date %>
-        <%= booking.ending_date %>
-        <%= link_to 'Afficher', bike_bookings_path(booking) %>
-      <% end %>
+  <h1>Hello <%= current_user.name%>!👋</h1>
+  <div class ="overview">
+    <div class="cards">
+      <h2>My bikes</h2>
+        <% @bikes.each do |bike| %>
+          <div class="card-product">
+            <div class="card-product-img">
+              <%= cl_image_tag bike.photo.key %>
+            </div>
+            <div class="card-product-info">
+              <h3><strong><%= bike.name %></strong></h3>
+            </div>
+          </div>
+        <% end %>
+    </div>
+    <div class="cards">
+      <h2>My bookings</h2>
+        <% @bookings.each do |booking| %>
+          <div class="card-product">
+            <div class="card-product-img">
+              <%= cl_image_tag booking.bike.photo.key %>
+            </div>
+            <div class="card-product-info">
+              <h3><strong><%= booking.bike.name %></strong></h3>
+              <p>du <%= booking.starting_date %></p>
+              <p>au <%= booking.ending_date %></p>
+            </div>
+          </div>
+        <% end %>
+    </div>
   </div>
 </div>

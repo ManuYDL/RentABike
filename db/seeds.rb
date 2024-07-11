@@ -10,6 +10,7 @@
 require "open-uri"
 
 # seed.rb
+Booking.destroy_all
 User.destroy_all
 Bike.destroy_all
 
