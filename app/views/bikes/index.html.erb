@@ -4,7 +4,7 @@
 <div class="bike_index_container">
   <% @bikes.each do |bike|%>
         <div class="bike_index_texte">
-          <img class="bike_index_img"src="<%= bike.image%>">
+          <%= cl_image_tag bike.photo.key, height: 300, width: 400, crop: :fill, class: "bike_index_img" %>
         <div class="bike_index_details">
           <%= bike.name%>
           <p> <%= bike.price%>€ </p>
