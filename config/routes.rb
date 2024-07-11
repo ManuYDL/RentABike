@@ -12,6 +12,5 @@ Rails.application.routes.draw do
   resources :bikes, only: [:index, :new, :create, :show] do
     resources :bookings, only: [:create]
   end
-
-
+  get "profile", to: "pages#profile", as: :profile
 end

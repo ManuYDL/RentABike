@@ -1,0 +1,12 @@
+<div class="container">
+  <center><h1>Hello <%= current_user.name%>!</h1></center>
+  <div>
+    <h2>Your bikes</h2>
+    <div class="row">
+      <% @bookings.each do |booking| %>
+        <%= booking.starting_date %>
+        <%= booking.ending_date %>
+        <%= link_to 'Afficher', bike_bookings_path(booking) %>
+      <% end %>
+  </div>
+</div>
