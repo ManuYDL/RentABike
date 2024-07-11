@@ -1,3 +1,4 @@
+
 <p class="notice d-none" data-controller="sweetalert"><%= notice %></p>
 
 <div class="mx-auto p-2"> <%=link_to "Return to others bike", bikes_path(@bike), class: "btn btn-warning rounded-3" %>
@@ -12,6 +13,11 @@
             <li> Description : <%= @bike.description %> </li>
         </ul>
       </div>
+
+<div class="mx-auto p-2"><h1><%= @bike.name %></h1>
+</div>
+
+<div class="mx-auto p-2"> <%= cl_image_tag @bike.photo.key, height: 300, width: 400, crop: :fill %>
 
       <div class="Manuel col-6 d-flex justify-content-center align-items-center">
         <div class="mx-auto p-2"> <img style="width: 100%;" src="<%= @bike.image %>">
