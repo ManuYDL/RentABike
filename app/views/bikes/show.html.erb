@@ -1,8 +1,8 @@
-<p class="notice d-none" data-controller="sweetalert"><%= notice %></p>
 <div class="mx-auto p-2"><h1><%= @bike.name %></h1>
 </div>
 
-<div class="mx-auto p-2"> <img src="<%= @bike.image%>" > </div>
+<div class="mx-auto p-2"> <%= cl_image_tag @bike.photo.key, height: 300, width: 400, crop: :fill %>
+
 
 <p> <ul> <h3>Specificity</h3>
 <li> Color : <%= @bike.color %> </li>

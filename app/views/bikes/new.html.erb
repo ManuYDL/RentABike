@@ -9,6 +9,10 @@
     <%= simple_form_for @bike do |f| %>
       <%= f.label :name %>
       <%= f.text_field :name %>
+      <%= f.label :description%>
+      <%= f.text_field :description%>
+      <%= f.label :color%>
+      <%= f.text_field :color%>
       <%= f.label :price %>
       <%= f.number_field :price %>
       <%= f.input :photo, as: :file %>
