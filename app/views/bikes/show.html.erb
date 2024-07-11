@@ -1,22 +1,37 @@
+
+<p class="notice d-none" data-controller="sweetalert"><%= notice %></p>
+
+<div class="mx-auto p-2"> <%=link_to "Return to others bike", bikes_path(@bike), class: "btn btn-warning rounded-3" %>
+  <div class= "grande div">
+    <div class="container bg-white d-flex mt-3 rounded-3">
+      <div class="qassim col-6 d-flex justify-content-center align-items-center mr-3">
+        <ul>
+          <h3>Specificity</h3>
+            <li> Color : <%= @bike.color %> </li>
+            <li> Price : <%= @bike.price %> € </li>
+            <li> Rented by : <%= @bike.user.name %> </li>
+            <li> Description : <%= @bike.description %> </li>
+        </ul>
+      </div>
+
 <div class="mx-auto p-2"><h1><%= @bike.name %></h1>
 </div>
 
 <div class="mx-auto p-2"> <%= cl_image_tag @bike.photo.key, height: 300, width: 400, crop: :fill %>
 
+      <div class="Manuel col-6 d-flex justify-content-center align-items-center">
+        <div class="mx-auto p-2"> <img style="width: 100%;" src="<%= @bike.image %>">
+        </div>
+        </div>
+      </div>
+    </div>
 
-<p> <ul> <h3>Specificity</h3>
-<li> Color : <%= @bike.color %> </li>
-<li> Price : <%= @bike.price %> € </li>
-<li> Rented by : <%= @bike.user.name %> </li>
-<li> Description : <%= @bike.description %> </li>
-</ul>
-</p>
-
-<div class="mx-auto p-2" class="rounded-1"> <%=link_to "Return to others bike", bikes_path(@bike), class: "btn btn-warning" %>
+      <div class="title">
+        <div class="mx-auto p-2 d-flex justify-content-center"><h1><%= @bike.name %></h1>
+        </div>
+      </div>
+  </div>
 </div>
-
-
-
 
 <%# ici sera placé notre formulaire %>
 <%# utilisation de simple form avec un "booking vide" %>
