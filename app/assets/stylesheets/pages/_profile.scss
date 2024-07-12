@@ -33,9 +33,10 @@ h1 {
   object-fit: cover;
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
+  width: 80%;
   img {
-    max-width: 80%;
-    max-height: 80%;
+    width: 80%;
+    object-fit: cover;
   }
 }
 .card-product-info {
