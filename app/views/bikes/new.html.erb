@@ -1,30 +1,30 @@
-<h1 class="new-title">Your bike</h1>
+<h1 class="new-title">🚲 Your bike 🚲 </h1>
   <div class="new-form" >
     <%= simple_form_for @bike do |f| %>
   <div class="form_text">
     <%= f.label :name %>
-    <%= f.text_field :name, class: "form-control" %>
+    <%= f.text_field :name, class: "form-control text", placeholder: "Marcel"%>
   </div>
 
   <div class="form_description">
     <%= f.label :description%>
-    <%= f.text_field :description, class: "form-control"%>
+    <%= f.text_field :description, class: "form-control text", placeholder: "Fast, competent, reliable"%>
   </div>
 
   <div class="form_color">
     <%= f.label :color%>
-    <%= f.text_field :color, class: "form-control" %>
+    <%= f.text_field :color, class: "form-control text", placeholder: "Black" %>
   </div>
 
   <div class="form_price">
     <%= f.label :price %>
-    <%= f.number_field :price, class: "form-control"  %>
+    <%= f.number_field :price, class: "form-control text", placeholder: "150" %>
   </div>
 
   <div class="form_photo">
     <%= f.input :photo, as: :file, class: "form-control"  %>
   </div>
 
-    <%= f.submit class: "btn btn-new"%>
+    <%= f.submit value: "Add my bike", class: "btn btn-new rounded-3"%>
     <% end %>
 </div>

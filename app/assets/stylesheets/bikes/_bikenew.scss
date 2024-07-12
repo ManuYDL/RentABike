@@ -36,9 +36,15 @@ h1 {
   border-radius: 4px;
   box-sizing: border-box;
   font-size: 16px;
+  color: grey;
+
 }
 
 .btn-new {
   background-color: #E67E22;
   margin: 30px;
+}
+
+.btn-new:hover {
+  background-color: #D35400;
 }
