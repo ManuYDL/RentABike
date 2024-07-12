@@ -48,3 +48,12 @@ h1 {
 .btn-new:hover {
   background-color: #D35400;
 }
+
+.text {
+
+
+  &::placeholder {
+    color: gray;
+    font-style: italic;
+  }
+}
