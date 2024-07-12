@@ -13,7 +13,7 @@
 
   <div class="form_color">
     <%= f.label :color%>
-    <%= f.text_field :color, class: "form-control text", placeholder: "Black" %>
+    <%= f.text_field :color, class: "form-control text", placeholder: "Black"%>
   </div>
 
   <div class="form_price">
@@ -22,7 +22,7 @@
   </div>
 
   <div class="form_photo">
-    <%= f.input :photo, as: :file, class: "form-control"  %>
+    <%= f.input :photo, as: :file, class: "form-control text", placeholder: "Choose a picture"  %>
   </div>
 
     <%= f.submit value: "Add my bike", class: "btn btn-new rounded-3"%>
