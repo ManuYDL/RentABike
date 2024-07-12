@@ -18,3 +18,8 @@ ul {
 .box-shadowed {
   box-shadow: 0 4px 6px grey;
 }
+
+.flexbox-space-between {
+  display: flex;
+  justify-content: space-between;
+}
