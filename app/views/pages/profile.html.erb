@@ -6,7 +6,7 @@
         <% @bikes.each do |bike| %>
           <div class="card-product">
             <div class="card-product-img">
-              <%= cl_image_tag bike.photo.key %>
+              <%= cl_image_tag bike.photo.key, style:"border-radius: 5px;"%>
             </div>
             <div class="card-product-info">
               <h3><strong><%= bike.name %></strong></h3>
@@ -20,7 +20,7 @@
         <% @bookings.each do |booking| %>
           <div class="card-product">
             <div class="card-product-img">
-              <%= cl_image_tag booking.bike.photo.key %>
+              <%= cl_image_tag booking.bike.photo.key, style:"border-radius: 5px;"%>
             </div>
             <div class="card-product-info">
               <h3><strong><%= booking.bike.name %></strong></h3>
