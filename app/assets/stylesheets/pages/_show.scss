@@ -1,0 +1,20 @@
+ul {
+  list-style-type: none;
+}
+
+.custom-rounded {
+  border-radius: 16px;
+}
+
+.custom-input {
+  width: 305px;
+
+  &::placeholder {
+    color: gray;
+    font-style: italic;
+  }
+}
+
+.box-shadowed {
+  box-shadow: 0 4px 6px grey;
+}

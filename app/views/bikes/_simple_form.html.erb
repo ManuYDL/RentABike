@@ -3,9 +3,15 @@
 <%= simple_form_for [bike, booking] do |f| %>
   <%= f.input :date_range,
             as: :string,
-            input_html: { data: { controller: "datepicker" } },
+            label: false,
+            input_html: {
+              data: { controller: "datepicker" },
+              placeholder: "Click to select your reservation dates",
+              style: "width: 305px; margin-left: 42px",
+              class: "form-control custom-input"
+            },
             class: "d-none" %>
-  <%= f.submit class: "btn btn-primary rounded-3 mb-3" %>
+  <%= f.submit class: "btn btn-primary rounded-3", style: "margin-left: 42px"%>
 <% end %>
 
 <%# on va utiliser flatpickr et ajouter la date selectionnée par l'User en f.input date debut et f.input date de fin %>

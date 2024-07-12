@@ -1,40 +1,30 @@
 
 <p class="notice d-none" data-controller="sweetalert"><%= notice %></p>
 
-<div class="mx-auto p-2"> <%=link_to "Return to others bike", bikes_path(@bike), class: "btn btn-warning rounded-3" %>
+<div class="mx-auto p-2">
+  <%=link_to "Return to others bike", bikes_path(@bike), class: "btn btn-warning rounded-3", style: "margin-left: 34px"%>
+
   <div class= "grande div">
-    <div class="container bg-white d-flex mt-3 rounded-3">
+    <div class="container bg-white d-flex mt-3 custom-rounded box-shadowed">
       <div class="qassim col-6 d-flex justify-content-center align-items-center mr-3">
         <ul>
-          <h3>Specificity</h3>
-            <li> Color : <%= @bike.color %> </li>
-            <li> Price : <%= @bike.price %> € </li>
-            <li> Rented by : <%= @bike.user.name %> </li>
-            <li> Description : <%= @bike.description %> </li>
+          <h3>Informations</h3>
+            <li> <img width="32" height="32" src="https://img.icons8.com/color/32/paint-palette.png" alt="paint-palette"/> <%= @bike.color %> </li>
+            <li> <img width="32" height="32" src="https://img.icons8.com/external-kmg-design-outline-color-kmg-design/32/external-euro-money-kmg-design-outline-color-kmg-design-3.png" alt="external-euro-money-kmg-design-outline-color-kmg-design-3"/> <%= @bike.price %> € </li>
+            <li> <img width="32" height="32" src="https://img.icons8.com/pulsar-color/32/user.png" alt="user"/> <%= @bike.user.name %> </li>
+            <li> <img width="32" height="32" src="https://img.icons8.com/external-anggara-filled-outline-anggara-putra/32/external-about-bubble-chat-anggara-filled-outline-anggara-putra.png" alt="external-about-bubble-chat-anggara-filled-outline-anggara-putra"/> <%= @bike.description %> </li>
         </ul>
       </div>
 
-<div class="mx-auto p-2"><h1><%= @bike.name %></h1>
-</div>
+      <div class="mx-auto p-2">
+              <h1><%= @bike.name %></h1>
+            </div>
 
-<div class="mx-auto p-2"> <%= cl_image_tag @bike.photo.key, height: 300, width: 400, crop: :fill %>
-
-      <div class="Manuel col-6 d-flex justify-content-center align-items-center">
-        <div class="mx-auto p-2"> <img style="width: 100%;" src="<%= @bike.image %>">
-        </div>
-        </div>
+      <div class="mx-auto p-2 mt-1 mb-1">
+        <%= cl_image_tag @bike.photo.key, height: 300, width: 400, crop: :fill, class: "custom-rounded"%>
       </div>
+
     </div>
-
-      <div class="title">
-        <div class="mx-auto p-2 d-flex justify-content-center"><h1><%= @bike.name %></h1>
-        </div>
-      </div>
   </div>
 </div>
-
-<%# ici sera placé notre formulaire %>
-<%# utilisation de simple form avec un "booking vide" %>
-<%# utiliser flatpick et simpl form %>
 <%= render "simple_form", booking: @booking, bike: @bike%>
-<%# notre form a besoin d'un booking et d'un velo, passés en paramètre %>
