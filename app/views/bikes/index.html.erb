@@ -1,16 +1,16 @@
 
 <h1 class="text-center"> 🚴‍♀️ Our rental bikes 🚴‍♀️ </h1>
 
-<div class="bike_index_container">
+<div class="bike-index-container">
   <% @bikes.each do |bike|%>
-        <div class="bike_index_texte">
-          <%= cl_image_tag bike.photo.key, height: 300, width: 400, crop: :fill, class: "bike_index_img" %>
-        <div class="bike_index_details">
-          <%= bike.name%>
-          <p> <%= bike.price%>€ </p>
-          <p>Good bike for you, enjoy your life with lot of speed</p>
-        </div>
-          <%=link_to "More details", bike_path(bike), class: "btn btn-warning" %>
-        </div>
+    <div class="bike-index-details">
+      <%= cl_image_tag bike.photo.key, crop: :fill, class: "bike-index-img"%>
+      <div class="bike-index-text">
+        <p><strong><%= bike.name%></strong></p>
+        <p> <%= bike.price%>€ </p>
+        <p> <%= bike.shortd %></p>
+      </div>
+      <%=link_to "More details", bike_path(bike), style: "border-radius: 16px;", class: "btn btn-warning" %>
+    </div>
   <% end %>
 </div>
