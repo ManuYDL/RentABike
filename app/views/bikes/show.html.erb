@@ -5,10 +5,10 @@
   <%=link_to "Return to others bike", bikes_path(@bike), class: "btn btn-warning rounded-3", style: "margin-left: 34px"%>
 
   <div class= "grande div">
-    <div class="container bg-white d-flex mt-3 custom-rounded box-shadowed">
+    <div class="container bg-white flexbox-space-between mt-3 custom-rounded box-shadowed">
       <div class="qassim col-6 d-flex justify-content-center align-items-center mr-3">
         <ul>
-          <h3>Informations</h3>
+          <h3><strong><%= @bike.name %></strong></h3>
             <li> <img width="32" height="32" src="https://img.icons8.com/color/32/paint-palette.png" alt="paint-palette"/> <%= @bike.color %> </li>
             <li> <img width="32" height="32" src="https://img.icons8.com/external-kmg-design-outline-color-kmg-design/32/external-euro-money-kmg-design-outline-color-kmg-design-3.png" alt="external-euro-money-kmg-design-outline-color-kmg-design-3"/> <%= @bike.price %> € </li>
             <li> <img width="32" height="32" src="https://img.icons8.com/pulsar-color/32/user.png" alt="user"/> <%= @bike.user.name %> </li>
@@ -16,12 +16,8 @@
         </ul>
       </div>
 
-      <div class="mx-auto p-2">
-              <h1><%= @bike.name %></h1>
-            </div>
-
-      <div class="mx-auto p-2 mt-1 mb-1">
-        <%= cl_image_tag @bike.photo.key, height: 300, width: 400, crop: :fill, class: "custom-rounded"%>
+      <div class="p-2 mt-1 mb-1">
+        <%= cl_image_tag @bike.photo.key, height: 300, width: 400, crop: :fill, class: "custom-rounded", style: "border-radius: 5px;"%>
       </div>
 
     </div>
